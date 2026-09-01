@@ -1,23 +1,34 @@
 #include <iostream>
 using namespace std;
-int Value(int x, int y){
+
+void Value(int x, int y) {
     x = 10;
     y = 20;
 }
-int reference(int &a, int &b){
+
+void reference(int &a, int &b) {
     a = 30;
     b = 40;
 }
-int main(){
+
+int main() {
     int c = 50;
     int d = 60;
 
+    // Call by Value
+    cout << "Before call by value: c = " << c << ", d = " << d << endl;
 
-    cout << "Before call by value: " << Value(c,d) << endl;
-    cout << "After call by value: " << Value(c,d) << endl;
+    Value(c, d);
 
-    cout << "Before call by reference: " << reference(c,d) << endl;
-    cout << "After call by reference: " << reference(c,d) << endl;
+    cout << "After call by value: c = " << c << ", d = " << d << endl;
 
 
+    // Call by Reference
+    cout << "\nBefore call by reference: c = " << c << ", d = " << d << endl;
+
+    reference(c, d);
+
+    cout << "After call by reference: c = " << c << ", d = " << d << endl;
+
+    return 0;
 }
