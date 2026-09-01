@@ -1,20 +1,50 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class BankAccount{
-    private:
-    int AccountNumber;
-    int Balance;
-    friend void compareBalance(BankAccount b1, BankAccount b2);
+
+class Marks {
+private:
+    int marks[5];
+
+public:
+    void input() {
+        cout << "Enter marks of 5 subjects:" << endl;
+
+        for (int i = 0; i < 5; i++) {
+            cin >> marks[i];
+        }
+    }
+
+    void display() {
+        cout << "Marks of 5 subjects: ";
+
+        for (auto x : marks) {
+            cout << x << " ";
+        }
+
+        cout << endl;
+    }
+
+    friend void totalMarks(Marks m);
 };
-void compareBalance(BankAccount b1, BankAccount b2){
-    if(b1.Balance > b2.Balance){
-        cout << "Account b1 has higher balance";
+
+void totalMarks(Marks m) {
+    int total = 0;
+
+    for (auto y : m.marks) {
+        total += y;
     }
-    else{
-        cout << "Account b2 has higher balance";
-    }
+
+    cout << "Total Marks = " << total << endl;
 }
-int main(){
-    
+
+int main() {
+    Marks m;
+
+    m.input();
+    m.display();
+
+    totalMarks(m);
+
     return 0;
 }
+
