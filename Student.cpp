@@ -17,7 +17,7 @@ public:
 int main() {
     student s;
     
-    s.rollNum = 1;
+    s.rollNum = 2;
     s.name = "Faraz";
     s.marks = 95;
     s.display();
