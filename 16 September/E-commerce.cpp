@@ -23,8 +23,8 @@ class product{
     }
 };
 int main(){
-    product p3(1, "Phone", 10000);
-    product p4(2, "charger", 6000);
+    product p3(1, "Phone", 12000);
+    product p4(2, "charger", 4000);
 
     p3.comparePrice(p3, p4);
     return 0;
