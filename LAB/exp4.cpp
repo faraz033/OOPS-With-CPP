@@ -1,11 +1,16 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
 using namespace std;
 
-int main(){
-    vector<int> numbers = {10,20,30,40,50};
-    for(auto value : numbers){
-        cout << value << endl;;
+int main() {
+    int marks[] = {85, 90, 78, 92, 88};
+
+    cout << "Marks of students:" << endl;
+
+    for (auto x : marks) {
+        cout << x << " ";
     }
+
+    cout << endl;
+
     return 0;
 }
