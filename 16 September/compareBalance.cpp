@@ -28,7 +28,7 @@ public:
         }
     }
 int main(){
-    bankAccount b3(2025, "Faraz", 6000);
+    bankAccount b3(2025, "Faraz", 5000);
     bankAccount b4(2026, "Arush", 7000);
 
     compareBalance(b3,b4);
