@@ -34,15 +34,15 @@ int Patient::activePatients = 0;
 
 int main() {
     Patient::showActivePatients();
-    Patient p1(101, "Faraz");
+    Patient p1(1, "Faraz");
 
     {
         cout << "\nInside local block:" << endl;
 
-        Patient p2(102, "Arush");
+        Patient p2(2, "Arush");
         Patient::showActivePatients();
 
-        Patient p3(103, "Anivaran");
+        Patient p3(3, "Anivaran");
         Patient::showActivePatients();
 
         cout << "\nLeaving local block..." << endl;
