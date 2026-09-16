@@ -33,7 +33,7 @@ public:
 int main() {
     University u("ABES Engineering College");
 
-    University::Department d("Computer Science", 120);
+    University::Department d("Computer Science", 115);
 
     d.display(u);
 
